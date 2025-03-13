@@ -12,7 +12,8 @@ public class Main
     System.out.println(arrayMax(array3));
     String[] array4 = {"Chocolate", "Ice", "Cream"};
     System.out.println(linearSearch(array4, "Cream"));
-    // TODO: Make an array of Strings as well as a target, and test your linearSearch method
+    int[][] tester = {{2, 30, 4}, {5, 6, 7}, {90, 32}};
+    System.out.println(maxArr(tester));
   }
 
 
@@ -55,5 +56,16 @@ public class Main
       }
     }
     return false;
+  }
+  public static int maxArr(int[][] arr) { // max for a double array.
+      int max = Integer.MIN_VALUE;
+      for(int i = 0; i < arr.length; i++) {
+        for(int j = 0; j < arr[i].length; j++) {
+            if(arr[i][j] > max) {
+              max = arr[i][j];
+            }
+        }
+      }
+      return max;
   }
 }
